@@ -1,4 +1,4 @@
-# Codex Cloud LabVIEW 2025 MCP
+# Codex_Cloud_LabVIEW_2025Q3_MCP
 
 Windows 11 / LabVIEW 2025 Q3 64-bit 的設定、安裝輔助工具、工作區 Skills 與 MCP 測試橋接。此專案保存可審閱的設定與腳本；它不是完整 VM 映像或一鍵還原工具。
 
