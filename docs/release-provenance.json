@@ -1,0 +1,9 @@
+{
+  "downloaded_utc": "2026-10-29T19:01:50.141724+00:00",
+  "url": "https://github.com/Zuehlke/labview-mcp/releases/download/v2.3.1/labview-mcp-v2.3.1.zip",
+  "sha256": "34cffee146e3452dc391cbf6b2c3c2d2c079e3a63e72796c4770c39217cc3224",
+  "tag": "v2.3.1",
+  "tag_commit": "5c9afb35d0156869b4bf1ec72816d07ef47bf10e",
+  "upstream_license": "MIT",
+  "status": "downloaded_verified_not_executed"
+}

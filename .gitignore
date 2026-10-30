@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.iso
+*.qcow2
+*.img
+*.fd
+*.sock
+*.pid
+*.log
+*.zip
+.env
+secrets/
+tpmstate*/
