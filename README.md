@@ -13,7 +13,7 @@ Windows 11 / LabVIEW 2025 Q3 64-bit 的設定、安裝輔助工具、工作區 S
 
 `vm/` 保存原 VM 啟動與 QMP 工具，含原機器 `/workspace/windows-vm` 等絕對路徑，須先依新主機位置調整。需自行準備 Windows 11 授權與媒體、LabVIEW 2025 Q3 64-bit 授權或有效評估版、QEMU、OVMF、swtpm 和磁碟空間。目前紀錄使用 TCG；支援 KVM 的 Linux 主機可改善效能。
 
-`guest/` 保存安裝與啟動腳本，假設 host 白名單 HTTP helper 在 127.0.0.1:8765，guest 透過 10.0.2.2:8765 取得固定版本 release 與 bridge；需先依原環境重建 helper。腳本驗證 release SHA-256，不啟用自動更新。
+`guest/` 保存安裝與啟動腳本，假設 host 白名單 HTTP helper 在 127.0.0.1:8765，guest 透過 10.0.2.2:8765 取得固定版本 release 與 bridge；可使用 `guest/transfer-server.py`，先核對其中檔案路徑並依原環境部署。腳本驗證 release SHA-256，不啟用自動更新。
 
 `bridge/` 是私人本機 HTTP 至 MCP stdio 橋接及假後端測試；QEMU 轉發應只綁主機 127.0.0.1，並限制客體防火牆來源。ChatGPT 自訂 MCP 的公開 HTTPS、認證與註冊需另外設計與驗證。
 
