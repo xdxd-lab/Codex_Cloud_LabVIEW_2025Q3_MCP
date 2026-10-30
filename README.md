@@ -22,3 +22,13 @@ Windows 11 / LabVIEW 2025 Q3 64-bit 的設定、安裝輔助工具、工作區 S
 執行 `python bridge/test_mcp_stdio_http.py` 測試橋接。該測試使用假後端，不代表 LabVIEW VI 建立／執行已成功。
 
 虛擬磁碟、TPM、ISO、個人資料、存取權杖、安裝日誌及大型第三方二進位檔不包含於儲存庫，因此無法還原當前 VM 的實際磁碟內容、啟用狀態或快照。固定版及 SHA-256 見 [release provenance](docs/release-provenance.json)。
+
+## 在新的 Codex Cloud 環境使用
+
+1. 建立或選擇可以存取本儲存庫的 Codex Cloud 環境，將此儲存庫選為工作目錄；若尚未下載，可執行 `git clone https://github.com/xdxd-lab/Codex_Cloud_LabVIEW_2025Q3_MCP.git`。
+2. 請 Codex 先閱讀本 README、`.agents/skills/` 與 `docs/candidates.md`，檢查新主機 CPU 虛擬化、`/dev/kvm`、磁碟空間及網路政策。Skills 是否自動載入取決於 Codex 的工作目錄與啟動時的技能探索；必要時直接指定技能檔案。
+3. 自行準備合法 Windows 11 與 LabVIEW 2025 Q3 64-bit 安裝媒體或可使用的既有 VM 備份，以及 QEMU、OVMF、swtpm；本倉庫不提供這些映像、現成 TPM 或 VM 磁碟。
+4. 依新環境調整 `vm/` 與 `guest/transfer-server.py` 的絕對路徑，準備固定版本的 MCP 發行包並依 `docs/release-provenance.json` 核對雜湊，再啟動 VM、安裝 LabVIEW 及 MCP。
+5. 啟動私人本機 bridge，驗證 MCP initialize、tools/list、唯讀工具，並以全新 VI 測試建立與執行。新 VM 環境需重新測試；既有的假後端測試不能證明真實 LabVIEW 整合成功。
+
+可在新 Codex 對話中貼上：「請先閱讀這個儲存庫的 README 與 Skills，檢查環境，協助我建置 Windows 11、LabVIEW 2025 Q3 64-bit 與 MCP，完成後用新 VI 驗證。」
